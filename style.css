@@ -85,6 +85,10 @@ body{
     color:#5d5d5d;
 }
 
+#check:checked ~ #txt{
+    text-decoration: line-through;
+}
+
 
 
 
