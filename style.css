@@ -11,31 +11,49 @@ body{
 .screen{
     display:flex;
     flex-direction: column;
-    position: absolute;
+    position:fixed;
     width:100%;
     height:100%;
+    padding:0;
     align-self: center;
     justify-self:center;
 
     align-items: center;
     justify-content: center;
 
-    background:#aaa;
+    background:#d4d6d4;
+    background:#152214;
 }
 
+h1{
+    padding:0 20px;
+    text-align: center;
+    /* border: 1px solid; */
+}
+
+h1, .appsubtitle{
+    /* color:#053f05; */
+    color:#f2f2f2;
+}
 
 .appTitle{
-    font-size:1.4em;
+    font-size:1.5em;
     padding:.6em 0 .6em 0;
     text-align: center;
+    color:lime;
     /* border:1px solid gray; */
 }
 
+.appsubtitle{
+    text-align: center;
+    font-size:14px;
+}
+
 .appBox{
-    padding:2em;
-    background:#f2f2f2;
+    /* padding:2em; */
+    /* background:#f2f2f2; */
     border-radius:.5em;
-    width:70%;
+    width:85%;
     /* border:1px solid; */
 }
 
@@ -43,53 +61,97 @@ body{
 .createRow{
     border:none;
     /* border:1px solid gray; */
-    background:#ddd;
+    background:#fff;
     display:flex;
     grid-gap:.5em;
     border-radius:.5em;
+    padding:.2em;
 }
 
 .createRow *{
     font-size:1.2em;
 }
 
-#inputBox{
+#createinput, #inputBox{
     border:none;
     background:transparent;
     width:100%;
     outline:none;
-    padding:.5em 1em;
+    padding:.8em 1em;
+    font-size: 17px;
+    color:#042404;
     /* border:1px solid; */
 }
 
 #addBtn{
-    padding:1em 2em;
+    padding:.6em 2em;
     border:none;
     background:#1cc41c;
     color:#f2f2f2;
-    border-radius:.5em;
+    border-radius:.3em;
+    cursor: pointer;
+    font-size:17px;
 }
 
 
 #listBox{
     list-style-type:none;
     padding:0;
-    /* border:1px solid; */
+    max-height:43vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-color: #ddd #f0f0f0;
+    /* padding: 0 .5em 0 0; */
+    /* border:1px solid #ddd; */
 }
 
+
 #listBox li{
-    font-size:1.2em;
-    margin:.5em 0;
+    font-size:1.02em;
+    /* margin:.5em 0; */
     background:#fff;
     padding:1em;
     color:#5d5d5d;
+    display:flex;
+    align-items: center;
+    grid-gap:0px;
+    transition:.3s ease-out 60ms;
+}
+#listBox li:hover{
+    background:#f5f5f5;
+    /* transform:scale(1.02); */
 }
 
-#check:checked ~ #txt{
+#check{
+    accent-color:green;
+    cursor: pointer;
+}
+
+#check:checked ~ #inputBox{
     text-decoration: line-through;
 }
 
 
+#remove{
+    color:green;
+    font-size:21px;
+    cursor:pointer;
+    transition:.3s ease-out 60ms;
+}
+#remove:hover{
+    color:limegreen;
+    font-weight: bold;
+}
+
+
+.footer{
+    text-align: center;
+    margin-top:2em;
+    color:#052b0c;
+    color:#c7c7c7;
+    font-size:14px;
+    /* border:1px solid; */
+}
 
 
 
@@ -102,12 +164,34 @@ body{
 
 @media only screen and (min-width:800px){
     
+
+    .screen{
+        padding:0;
+    }
+
+
     .appBox{
-        padding:2em;
-        background:#f2f2f2;
+        /* background:#f2f2f2; */
         border-radius:.5em;
-        width:35%;
+        width:70%;
         /* border:1px solid; */
+    }
+
+
+    .footer{
+        font-size:17px;
+    }
+}
+
+
+
+
+
+
+
+@media only screen and (min-width:1000px){
+    .appBox{
+        width:40%;
     }
 }
 

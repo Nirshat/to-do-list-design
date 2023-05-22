@@ -13,26 +13,43 @@
 </head>
 <body>
     <div class="screen">
+
         <div class="appBox">
+            <h1>Manage and Organize Your Task✅</h1>
             <div class="appTitle">To-Do List App 📃</div>
+            <div class="appsubtitle"> -What task needs to be done?- </div>
             <br>
 
             <div class="createRow">
-                <input type="text" id="inputBox" placeholder="Add your text..." maxlength="50">
+                <input type="text" id="createinput" placeholder="Add your task..." maxlength="50">
                 <button id="addBtn">Add</button>
             </div>
 
 
+
             <ul id="listBox">
-                <li> <input type="checkbox" id="check"> <span id="txt">Add To-Do 1</span></li>
-                <li> <input type="checkbox" id="check"> <span id="txt">Add To-Do 2</span></li>
-                <li> <input type="checkbox" id="check"> <span id="txt">Add To-Do 3</span></li>
             </ul>
 
+            <template id="itemTemplate">
+                <li id="litem">
+                    <input type="checkbox" id="check" class="checkclass">
+                    <input type="text" id="inputBox" class="txtClass" placeholder="(empty)" >
+
+                    <!-- <i class="fa-solid fa-circle-minus" id="remove"></i> -->
+                </li>
+            </template>
+        </div>
+
+
+        <div class="footer">
+            Develop with 💚 by: Aron Paul Gonzales
         </div>
     </div>
 
 
-    <script src=""></script>
+
+    <script src="https://kit.fontawesome.com/f4106a4f9b.js" crossorigin="anonymous"></script>
+    <script src="script.js" defer> </script>
+
 </body>
 </html>
