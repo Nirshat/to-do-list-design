@@ -207,7 +207,7 @@ h1, .appsubtitle{
 
 
 
-@media only screen and (min-height:400px){
+@media only screen and (min-height:100px){
     .screen{
         position:absolute;
         width:100%;
