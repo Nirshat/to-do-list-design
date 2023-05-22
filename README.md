@@ -1,1 +1,1 @@
-This To-Do List is for my personal design purpose only (not functional).
+A Simple To-Do List that helps you to manage and organize your tasks.
